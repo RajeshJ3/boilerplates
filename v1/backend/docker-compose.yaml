@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:alpine
+    env_file:
+      - .db.env
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres/pgdata/:/var/lib/postgresql/data
+    restart: on-failure
+
+  api:
+    build: .
+    command: sh -c "gunicorn --bind 0.0.0.0:8000 --workers=4 core.wsgi --reload"
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+    restart: on-failure

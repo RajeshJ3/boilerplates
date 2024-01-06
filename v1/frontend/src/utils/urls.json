@@ -1,0 +1,79 @@
+{
+	"auth": {
+		"title": "Auth",
+		"path": "auth",
+		"absolutePath": "/auth",
+		"children": {
+			"login": {
+				"title": "Login",
+				"pathId": "auth.login",
+				"path": "login",
+				"absolutePath": "/auth/login"
+			},
+			"signup": {
+				"title": "Sign up",
+				"pathId": "auth.signup",
+				"path": "signup",
+				"absolutePath": "/auth/signup"
+			},
+			"signupSuccess": {
+				"name": "Sign up Success",
+				"pathId": "auth.signupSuccess",
+				"path": "signup-success",
+				"absolutePath": "/auth/signup-success"
+			},
+			"signupVerification": {
+				"name": "Sign up Verification",
+				"pathId": "auth.signupVerification",
+				"path": "signup-verification/:key",
+				"absolutePath": "/auth/signup-verification/:key"
+			},
+			"forgotPassword": {
+				"name": "Forgot Password",
+				"pathId": "auth.forgotPassword",
+				"path": "forgot-password",
+				"absolutePath": "/auth/forgot-password"
+			},
+			"resetPassword": {
+				"name": "Reset Password",
+				"pathId": "auth.resetPassword",
+				"path": "reset-password/:uid/:token",
+				"absolutePath": "/auth/reset-password/:uid/:token"
+			}
+		}
+	},
+	"dashboard": {
+		"title": "Dashboard",
+		"path": "",
+		"absolutePath": "/",
+		"pathId": "dashboard",
+		"children": {
+			"dashboard": {
+				"title": "Dashboard",
+				"pathId": "dashboard.dashboard",
+				"path": "",
+				"absolutePath": "/"
+			}
+		}
+	},
+	"account": {
+		"title": "Account",
+		"path": "account",
+		"absolutePath": "/account",
+		"pathId": "account",
+		"children": {
+			"account": {
+				"path": "",
+				"pathId": "account.account",
+				"title": "Account",
+				"absolutePath": "/account"
+			},
+			"updateAccount": {
+				"path": "update",
+				"pathId": "account.updateAccount",
+				"title": "Update Account",
+				"absolutePath": "/account/update"
+			}
+		}
+	}
+}
